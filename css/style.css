@@ -453,3 +453,26 @@ span{
     font-size: 40px;
     margin-right: 5px;
  }
+
+ .skills-list {
+  display: flex;
+  flex-wrap: wrap; /* Đảm bảo các phần tử tự động xuống dòng khi không đủ không gian */
+}
+
+.skill-item {
+  flex: 0 0 33.33%; /* Căn chỉnh chiều rộng của các phần tử con để hiển thị 3 cột trên một dòng */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .skill-item {
+    flex: 0 0 50%; /* Khi màn hình nhỏ hơn, hiển thị 2 cột trên một dòng */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-item {
+    flex: 0 0 100%; /* Khi màn hình rất nhỏ, hiển thị 1 cột trên một dòng */
+  }
+}
